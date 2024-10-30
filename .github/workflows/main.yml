@@ -1,0 +1,11 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+    Explore-GitHub-Actions:
+      runs-on: ubuntu
+      steps:
+        - name: Start
+          uses: abel0b/setup-premake@v2.4, mxcl/xcodebuilf
+        - run: Tools/premake5 xcode4 --os=ios
+        - run: xcodebuild -project Runtime.xcodeproj CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
