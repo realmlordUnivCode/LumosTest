@@ -9,6 +9,7 @@ jobs:
           uses: abel0b/setup-premake@v2.4
           with:
              version: "5.0.0-beta2"
+        - run: cd Lumos/
         - run: premake5 xcode4 --os=ios
         - name: buildXCode
           uses: mxcl/xcodebuild@v3
