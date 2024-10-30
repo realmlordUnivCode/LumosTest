@@ -9,7 +9,7 @@ jobs:
           uses: abel0b/setup-premake@v2.4
           with:
              version: "5.0.0-beta2"
-        - run: Tools/premake5 xcode4 --os=ios
+        - run: premake5 xcode4 --os=ios
         - name: buildXCode
           uses: mxcl/xcodebuild@v3
         - run: xcodebuild -project Runtime.xcodeproj CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
