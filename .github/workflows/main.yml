@@ -3,13 +3,15 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
     Explore-GitHub-Actions:
+      defaults:
+         run:
+            working-directory: ./Lumos
       runs-on: ubuntu-latest
       steps:
         - name: Start
           uses: abel0b/setup-premake@v2.4
           with:
              version: "5.0.0-beta2"
-        - run: cd Lumos/
         - run: premake5 xcode4 --os=ios
         - name: buildXCode
           uses: mxcl/xcodebuild@v3
