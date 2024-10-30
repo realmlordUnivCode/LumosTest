@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
     Explore-GitHub-Actions:
-      runs-on: ubuntu_latest
+      runs-on: ubuntu-latest
       steps:
         - name: Start
           uses: abel0b/setup-premake@v2.4, mxcl/xcodebuilf
